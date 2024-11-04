@@ -1,10 +1,28 @@
 body{
-    background-color: rgb(215, 215, 169);
+    background-color: rgb(255, 255, 255);
 }
+
 h1{
     color: rgb(146, 22, 22);
     text-align: center;
+    font-family: unlock;
+   
 }
-p {
+#subtitulo {
     text-align: center;
 }
+.unlock-regular {
+    font-family: "Unlock", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  h2{
+    font-family: unlock;
+    font-size: larger;
+  }
+  h1:hover {
+color: red;
+  }
+  button:hover{
+    color: red;
+  }
