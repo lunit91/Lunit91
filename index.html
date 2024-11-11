@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <link rel="stylesheet" type="text/css" href="hola.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Unlock&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div>
+  
+  <header>
   <h1>Todas mis cosas favoritas del mejor juego del planeta (rdr2)</h1>
   <p id="subtitulo">segun: gusto personal y mi no tan buen juicio</p>
-  </div>
+  </header>
 
+  <div id="padre">
+    <div class="hijo">
   <h2>Mision favorita por capitulo</h2>
   <ol>
     <li>capitulo 1 <a href="https://youtu.be/ZKYT6Xc3cLw"> Who the hell is Leviticus Cornwall</a></li>
@@ -25,9 +29,13 @@
     <li> capitulo 6 <a href="https://youtu.be/gg8mvDDTel8">Red Dead Redemption</a> </li>
     <li> epilogo <a href="https://youtu.be/awQjHax3g3s"> American Venom</a> </li>
   </ol>
+   
   <img width="400px" src="https://cdn.staticneo.com/ew/4/43/RDR2_168.png" title="Blood Feuds, Ancient and Modern" alt="La Van der Linde gang yendo a atacar la mansion braithwaite en la mision Blood Feuds, Ancient and Modern">
- 
+     </div>
+
+     <div class="hijo">  
   <h2>Canciones Favoritas del Soundtrack</h2>
+
   <ul>
     <li><a href="https://youtu.be/0ME7x7_blf8">Mountain Hymn</a> </li>
     <li><a href="https://youtu.be/uvcexlzNvmk">Unshaken</a> </li>
@@ -35,17 +43,21 @@
     <li><a href="https://youtu.be/YdW5-uJqCVY">That's The Way it Is</a> </li>
   </ul>
   <img width="400px" src="https://i.pinimg.com/originals/ab/ea/74/abea74822a68ea98e1f9104ecad6342e.jpg" title="RDR2 soundtrack" alt="La portada del album del soundtrack de Red Dead Redemption 2, que es una imagen dibujada en rojo de Arthur Morgan">
+     </div>
+     
+     <div class="hijo">
   <h2>Personajes Favoritos</h2>
-  <ul>
+  <ul id="characters">
     <li>Arthur Morgan</li>
-    <li>John Marston</li>
-    <li> Sadie Adler</li>
-    <li> Hosea Matthews</li>
+    <li>Sadie Adler</li>
+    <li> John Marston</li>
     <li>Sean Maguire</li>
+    <li>Hosea Matthews</li>
     <li>Dutch Van Der Linde</li>
   </ul>
   <img width="400px" src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/10/red-dead-redemption-2-characters-on-horses.jpg" title="red dead redemption 2" alt=" Arthur Morgan, john Marston y Lenny Summers montando a caballo rdr2">
- 
+     </div>
+</div>
  <h2>Cantidad de misiones por capitulo</h2>
 
   <table>
@@ -108,6 +120,7 @@
 <input type="file" name="character" value="photo of a character you like"><br>
 <br>
 <button>Press me</button>
+
 </form>
 <br>
 <br>

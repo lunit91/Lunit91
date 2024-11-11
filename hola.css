@@ -3,9 +3,10 @@ body{
 }
 
 h1{
-    color: rgb(146, 22, 22);
+    color: rgb(0, 0, 0);
     text-align: center;
     font-family: unlock;
+    background-color: rgb(159, 28, 28);
    
 }
 #subtitulo {
@@ -26,3 +27,20 @@ color: red;
   button:hover{
     color: red;
   }
+ #characters>li:nth-child(odd) {
+  border-width: 3px;
+  border-style: dotted;
+  border-color: red;
+  padding: 10px;
+ }
+#padre {
+ 
+  
+  display: flex;
+
+  justify-content: space-between;
+}
+.hijo {
+ 
+
+}
