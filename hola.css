@@ -33,14 +33,68 @@ color: red;
   border-color: red;
   padding: 10px;
  }
-#padre {
- 
-  
-  display: flex;
 
-  justify-content: space-between;
+
+#historia {
+  width: 500px;         
+  height: 200px;         
+  padding: 10px;         
+  text-align: center;    
+  justify-content: center;
+  align-items: center;    
+  margin: 20px auto;     
+  color: rgb(255, 255, 255);
 }
-.hijo {
- 
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4e1c1;
+  color: #4a2511;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
 
+.game-container {
+  padding: 20px;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+#cowboy {
+  font-size: 5rem;
+  margin: 20px 0;
+}
+
+#result {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: rgb(255, 255, 255);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #d67e2c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b25c1e;
+}
+
+#enemy {
+  font-size: 1rem;
+  color: white;
+}
+
+#message{
+  color: white;
 }
