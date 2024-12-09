@@ -1,16 +1,24 @@
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 
-h1{
+#duelo{
     color: rgb(0, 0, 0);
     text-align: center;
     font-family: unlock;
     background-color: rgb(159, 28, 28);
    
 }
-#subtitulo {
-    text-align: center;
+#titulo {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: unlock;
+}
+p{
+  color:white;
+  font-family: old-standard-tt-regular;
+  font-size: larger;
+
 }
 .unlock-regular {
     font-family: "Unlock", serif;
@@ -21,33 +29,20 @@ h1{
     font-family: unlock;
     font-size: larger;
   }
-  h1:hover {
-color: red;
+  #titulo:hover {
+    color: red;
+  }
+  #duelo:hover {
+    color: red;
   }
   button:hover{
     color: red;
   }
- #characters>li:nth-child(odd) {
-  border-width: 3px;
-  border-style: dotted;
-  border-color: red;
-  padding: 10px;
- }
-
-
-#historia {
-  width: 500px;         
-  height: 200px;         
-  padding: 10px;         
-  text-align: center;    
-  justify-content: center;
-  align-items: center;    
-  margin: 20px auto;     
-  color: rgb(255, 255, 255);
-}
-body {
+ 
+ 
+ body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4e1c1;
+  background-color: #000000;
   color: #4a2511;
   text-align: center;
   margin: 0;
@@ -73,7 +68,7 @@ h1 {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 20px 0;
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 button {
@@ -94,7 +89,43 @@ button:hover {
   font-size: 1rem;
   color: white;
 }
-
-#message{
+#message {
   color: white;
+}
+
+.old-standard-tt-regular {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.old-standard-tt-bold {
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.old-standard-tt-regular-italic {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.unlock-regular {
+  font-family: "Unlock", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.historia {
+ background-color: black;
+
+}
+
+.background {
+  height: 500px; /* Altura de la "ventana" */
+  background-image: url(https://cdn.staticneo.com/ew/4/43/RDR2_168.png); /* Cambia por la ruta de tu imagen */
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Fija la imagen al fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
