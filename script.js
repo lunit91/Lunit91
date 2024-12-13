@@ -65,7 +65,6 @@ startButton.addEventListener('click', () => {
   gameReady = false; 
   clearTimeout(timeout); 
   clearTimeout(loseTimeout);
-
   
   const delay = Math.random() * 2000 + 2000;
 
