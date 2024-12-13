@@ -36,39 +36,75 @@
    
 
   <h1 id="titulo">Red dead redemption II</h1>
-  <img width="400px" src="https://i.pinimg.com/originals/ab/ea/74/abea74822a68ea98e1f9104ecad6342e.jpg" title="RDR2 soundtrack" alt="La portada del album del soundtrack de Red Dead Redemption 2, que es una imagen dibujada en rojo de Arthur Morgan">
+  <br>
+  
+  <div class="padre">
     
+    <div class="contenedor">
+      <figure>
+        <img width="300px" src="https://i.pinimg.com/originals/ab/ea/74/abea74822a68ea98e1f9104ecad6342e.jpg" title="RDR2 soundtrack" alt="La portada del album del soundtrack de Red Dead Redemption 2, que es una imagen dibujada en rojo de Arthur Morgan">
+        <div class="capa">
+          <h3>soundtrack</h3>
+          <p>Basada en la evocadora banda sonora del Red Dead Redemption original, la banda sonora y la música de Red Dead Redemption 2 son un viaje poderoso y emotivo a través de los últimos días de la era ilegal en Estados Unidos.</p>
+        </div>
+      </figure>
+    </div>
+    
+    <div class="contenedor">
+      <figure>
+        <img width="500px"  src="https://64.media.tumblr.com/9843d425f57245e03d903d09498c11ec/e8c5e2db604c38bf-1a/s1280x1920/6df25b33c34f83f009a44a4e00eb901737175905.png" title="Van der linde's gang" alt="una foto con todos los personajes que pertenecen a la banda de Dutch van der linde">
+        <div class="capa">
+          <h3>personajes</h3>
+          <p>Rockstar empleó a 1.200 actores para interpretar a sus personajes, 700 de ellos con diálogo. Cada personaje no jugable posee su propia personalidad y carácter y la posibilidad de interactuar con ellos</p>
+        </div>
+      </figure>
+      </div>
+    
+    <div class="contenedor">
+      <figure>
+        <img width="300px" src="https://dwghz4n36bf92.cloudfront.net/3/5/3.webp" title="map" alt="el mapa del red dead redemption 2">
+        <div class="capa">
+          <h3>mapa</h3>
+          <p>
+            El mapa de Red Dead Redemption 2 es un extenso mundo abierto que abarca desde montañas nevadas hasta pantanos y praderas. Cada región está llena de vida, detalles y secretos, creando un entorno inmersivo perfecto para explorar y vivir aventuras.</p>
+        </div>
+      </figure>
+      </div>
+  </div>
      
-     
+
+
+
+
+
+  <div class="content">
+    <h1>Carrito de Juegos</h1>
+    <p>Selecciona los juegos que quieres agregar al carrito:</p>
+
+ 
+    <div>
+      <button type="button" class="game-button" data-name="Red Dead Redemption 1" data-price="50">
+        Red Dead Redemption 1 - $50
+      </button>
+     <button type="button" class="game-button" data-name="Undead Nightmare" data-price="10">
+        Undead Nightmare (dlc) - $10
+      </button>
+      <button type="button" class="game-button" data-name="Red Dead Redemption 2" data-price="60">
+        Red Dead Redemption 2 - $60
+      </button>
+    </div>
+
   
+   <div id="result" class="hidden">
+      <h2>Resumen de la Compra</h2>
+      <p id="selectedGames">Juegos seleccionados:</p>
+      <p>Total: $<span id="totalPrice">0</span></p>
+      <button type="button" id="buyButton">Finalizar Compra</button>
+    </div>
+  </div>
 
-<br>
-
-<h2>Join Fan Club</h2>
-<form action="result.html">
-  
-<input type="checkbox" name="charater" value="Arthur" > I like RDR2 <br>
-<input type="checkbox" name="character2" value="John"> I like RDR
-<br>
-
-
-<select name="characters">
-  <option value="Arthur">Arthur</option>
-  <option value="John">John</option>
-</select>
-<br>
-<br>
-<input type="text" name="name" value="name"> <br>
-<input type="email" name="email" value="email" required> <br>
-<input type="text" name="message" value="message"> <br>
-<p>favourite character:</p>
-<input type="file" name="character" value="photo of a character you like"><br>
-<br>
-<button>Press me</button>
-
-</form>
-<br>
-<br>
+  <br>
+  <br>
 
 
   
@@ -79,15 +115,12 @@
       🤠 <br>
       <span id="enemy">Enemigo</span>
     </div>
-    <div id="result"></div>
+    <div id="result2"></div>
     <button id="startButton">Iniciar Duelo</button>
   </div>
-  <script src="script.js"></script>
-</body>
-</html>
 
-<script src="script.js">
+ <script src="script.js">
 
-</script>
+ </script>
 </body>
 </html>

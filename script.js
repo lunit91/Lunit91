@@ -1,56 +1,107 @@
+const selectedGames = [];
+let total = 0;
+
+
+document.querySelectorAll('.game-button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const gameName = button.getAttribute('data-name');
+    const gamePrice = parseFloat(button.getAttribute('data-price'));
+
+    
+    if (!selectedGames.includes(gameName)) {
+      selectedGames.push(gameName);
+      total += gamePrice;
+
+      
+      updateCart();
+    } else {
+      alert(`${gameName} ya está en el carrito.`);
+    }
+  });
+});
+
+
+function updateCart() {
+  document.getElementById('selectedGames').innerText = selectedGames.join(', ');
+  document.getElementById('totalPrice').innerText = total.toFixed(2);
+  document.getElementById('result').classList.remove('hidden');
+}
+
+
+document.getElementById('buyButton').addEventListener('click', () => {
+  if (selectedGames.length > 0) {
+    alert(`Gracias por tu compra 🎉. Compraste: ${selectedGames.join(', ')}. Total: $${total.toFixed(2)}.`);
+    resetCart();
+  } else {
+    alert('El carrito está vacío.');
+  }
+});
+
+
+function resetCart() {
+  selectedGames.length = 0;
+  total = 0;
+  document.getElementById('selectedGames').innerText = '';
+  document.getElementById('totalPrice').innerText = '0';
+  document.getElementById('result').classList.add('hidden');
+}
+
+
+
+
+
 const startButton = document.getElementById('startButton');
 const message = document.getElementById('message');
-const result = document.getElementById('result');
+const result2 = document.getElementById('result2');
 
-let gameReady = false; // Controla si puedes disparar
-let timeout; // Temporizador para mostrar "¡DISPARA!"
-let loseTimeout; // Temporizador para perder si no disparas a tiempo
-
+let gameReady = false; 
+let timeout; 
+let loseTimeout; 
 startButton.addEventListener('click', () => {
-  // Restablece todos los estados del juego
-  startButton.disabled = true; // Desactiva el botón mientras el juego está activo
-  result.textContent = ''; // Limpia el resultado previo
-  message.textContent = 'Prepárate...'; // Mensaje inicial
-  gameReady = false; // Asegura que el juego comience correctamente
-  clearTimeout(timeout); // Limpia temporizadores previos
+  
+  startButton.disabled = true; 
+  result2.textContent = '';
+  message.textContent = 'Prepárate...'; 
+  gameReady = false; 
+  clearTimeout(timeout); 
   clearTimeout(loseTimeout);
 
-  // Genera un tiempo aleatorio entre 2 y 4 segundos para mostrar "¡DISPARA!"
+  
   const delay = Math.random() * 2000 + 2000;
 
   timeout = setTimeout(() => {
-    gameReady = true; // Ahora el jugador puede disparar
-    message.textContent = '¡DISPARA!'; // Cambia el mensaje
+    gameReady = true; 
+    message.textContent = '¡DISPARA!'; 
 
     
     loseTimeout = setTimeout(() => {
-      if (gameReady) { // Solo pierdes si no disparaste
-        gameReady = false; // Desactiva el estado de "listo para disparar"
-        result.textContent = '¡Perdiste! Te dispararon 🤕';
+      if (gameReady) { 
+        gameReady = false; 
+        result2.textContent = '¡Perdiste! Te dispararon 🤕';
         message.textContent = 'Presiona "Iniciar Duelo" para intentarlo de nuevo.';
-        startButton.disabled = false; // Habilita el botón para reiniciar
+        startButton.disabled = false; 
       }
-    }, 1000); // Límite de tiempo para disparar 
+    }, 1000); 
   }, delay);
 });
 
 document.addEventListener('keydown', (event) => {
   if (event.code === 'Space') {
     if (gameReady) {
-      // Si disparas en el momento correcto
+      
       clearTimeout(timeout);
-      clearTimeout(loseTimeout); // Detén el temporizador de perder
-      gameReady = false; // Evita disparos múltiples
-      result.textContent = '¡Ganaste! 🤠'; // Mensaje de victoria
-      message.textContent = 'Presiona "Iniciar Duelo" para jugar otra vez.'; // Mensaje de reinicio
-      startButton.disabled = false; // Habilita el botón
+      clearTimeout(loseTimeout); 
+      gameReady = false; 
+      result2.textContent = '¡Ganaste! 🤠'; 
+      message.textContent = 'Presiona "Iniciar Duelo" para jugar otra vez.'; 
+      startButton.disabled = false; 
     } else {
       
-      clearTimeout(timeout); // Limpia el temporizador de mostrar "¡DISPARA!"
-      clearTimeout(loseTimeout); // Limpia el temporizador de perder
-      result.textContent = '¡Disparaste antes de tiempo! 💥'; // Penalización
+      clearTimeout(timeout); 
+      clearTimeout(loseTimeout); 
+      result2.textContent = '¡Disparaste antes de tiempo! 💥'; 
       message.textContent = 'Presiona "Iniciar Duelo" para intentarlo de nuevo.';
-      startButton.disabled = false; // Habilita el botón
+      startButton.disabled = false; 
     }
   }
 });
